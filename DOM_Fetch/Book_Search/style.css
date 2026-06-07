@@ -1,3 +1,25 @@
+* {
+  color: white;
+}
+
+body,
+input,
+button {
+  background-color: black;
+}
+
 .book {
-  border: 1px solid green;
+  background-color: rgb(10, 1, 24);
+
+  width: 400px;
+  height: 200px;
+  margin: 30px 20px;
+  border-radius: 30px;
+  padding: 25px;
+}
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
