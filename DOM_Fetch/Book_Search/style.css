@@ -1,5 +1,15 @@
+@font-face {
+  font-family: "Jellee";
+  src: url("./src/fonts/Jellee-Roman.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   color: white;
+  font-family: "Jellee", serif;
+  font-weight: lighter;
+  letter-spacing: 5%;
 }
 
 body,
@@ -8,18 +18,71 @@ button {
   background-color: black;
 }
 
-.book {
-  background-color: rgb(10, 1, 24);
-
-  width: 400px;
-  height: 200px;
-  margin: 30px 20px;
+header {
+  background-color: rgb(209, 174, 255);
+  text-align: center;
+  padding: 5px;
   border-radius: 30px;
-  padding: 25px;
+}
+header h1,
+header p {
+  color: black;
 }
 
-.results {
+header h1 {
+  font-size: 4em;
+  margin: 20px auto;
+  letter-spacing: 3%;
+}
+header p {
+  margin-top: -20px;
+}
+
+#searchBar {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 2.5em;
+}
+#searchBar p {
+  margin: 0 auto;
+}
+#searchBar input {
+  margin: 0 auto;
+  font-size: 0.5em;
+  width: 90vw;
+  text-align: center;
+  border-radius: 10px;
+}
+#searchBar button {
+  font-size: 0.5em;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#res-count {
+  letter-spacing: 5%;
+}
+
+.book {
+  background-color: rgb(10, 1, 24);
+  padding: auto;
+  padding-left: 30px;
+  padding-top: 5px;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.book-title {
+  font-size: 2em;
+  margin: 10px auto auto;
+}
+
+.book-info {
   display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
+  gap: 30px;
+  font-size: 1em;
+}
+.book-info h2 {
+  font-size: 1em;
 }

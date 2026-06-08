@@ -10,9 +10,11 @@ function createBookEntry(title, authorName, firstPublishYear) {
   const res = document.createElement("div");
   res.classList.add("book");
   res.innerHTML = `
-  <h2>Title: ${title}</h2>
-  <h2>Author: ${authorName}</h2>
-  <h2>First Publish Year: ${firstPublishYear}</h2>
+  <h2 class="book-title">${title}</h2>
+  <div class="book-info">
+    <h2>Author: ${authorName}</h2>
+    <h2>First Publish Year: ${firstPublishYear}</h2>
+  </div>
   `;
 
   results.appendChild(res);

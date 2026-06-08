@@ -7,21 +7,29 @@
     <title>Book Search</title>
   </head>
   <body>
-    <h1>Search Books</h1>
-    <form id="searchForm">
-      <div class="form-group">
-        <label for="userInput">Enter the Book Title:</label>
-        <input
-          type="text"
-          id="userInput"
-          value="The lord of the rings"
-          required
-        />
-      </div>
-      <button type="submit" id="submitBtn">Search</button>
-    </form>
+    <header>
+      <h1>Search Books</h1>
+      <p>Supported by Open Library</p>
+    </header>
 
-    <div id="results"></div>
+    <main>
+      <section id="searchBar">
+        <form id="searchForm">
+          <div class="form-group">
+            <p>Enter the Book Title</p>
+            <input
+              type="text"
+              id="userInput"
+              value="The lord of the rings"
+              required
+            />
+          </div>
+          <button type="submit" id="submitBtn">Search</button>
+        </form>
+      </section>
+
+      <div id="results"></div>
+    </main>
 
     <script defer src="script.js"></script>
   </body>
