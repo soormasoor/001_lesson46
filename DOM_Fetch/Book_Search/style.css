@@ -90,6 +90,54 @@ header p {
 #pagination {
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 30px auto;
+}
+
+#pagination button,
+.page-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid rgb(209, 174, 255);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-family: "Jellee", serif;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  min-width: 40px;
+}
+
+#pagination button:hover,
+.page-btn:hover {
+  background-color: rgb(209, 174, 255);
+  color: black;
+}
+
+#pagination button:disabled {
+  border-color: rgb(100, 80, 120);
+  color: rgb(100, 80, 120);
+  cursor: not-allowed;
+}
+
+#pagination button:disabled:hover {
+  background-color: black;
+  color: rgb(100, 80, 120);
+}
+
+.page-btn.active {
+  background-color: rgb(209, 174, 255);
+  color: black;
+  cursor: default;
+  font-weight: bold;
+}
+
+.ellipsis {
+  color: rgb(180, 150, 220);
+  padding: 0 4px;
+  align-self: center;
 }
