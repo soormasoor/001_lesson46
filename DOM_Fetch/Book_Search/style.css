@@ -86,3 +86,10 @@ header p {
 .book-info h2 {
   font-size: 1em;
 }
+
+#pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
