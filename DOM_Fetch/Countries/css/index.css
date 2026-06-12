@@ -1,4 +1,30 @@
+* {
+  color: white;
+}
+
 body {
+  background-color: #024950;
+
   margin: 0 auto;
   text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 0;
+}
+header p {
+  margin-top: 0;
+}
+
+#search-input {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+#search-btn {
+  background-color: #003135;
+  font-size: 2em;
+  border-radius: 10px;
+  padding: 10px;
 }
