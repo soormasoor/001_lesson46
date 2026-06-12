@@ -28,3 +28,20 @@ header p {
   border-radius: 10px;
   padding: 10px;
 }
+
+#country-name {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+#capital-name {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+#flag-div {
+  margin-top: 50px;
+}
+#flag {
+  width: 500px;
+  border-radius: 20px;
+}

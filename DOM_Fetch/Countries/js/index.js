@@ -7,7 +7,8 @@ const mainPageContent = document.getElementById("main-page-content");
 // State
 const BASE_URL = "https://api.restcountries.com/countries/v5";
 const API_KEY = "rc_live_fcdb8e3d69be45ae8bdca23e75f1649c";
-let currentQuery = "";
+let currentQuery =
+  "https://api.restcountries.com/countries/v5?api-key=rc_live_fcdb8e3d69be45ae8bdca23e75f1649c";
 
 // Helper Functions
 function formatQuery(str) {
@@ -30,12 +31,27 @@ async function getCountry() {
   return data;
 }
 
-function renderCountry(data) {
+async function renderCountry(data) {
+  const commonName = data.data.objects[0].names.common;
+  const capital = data.data.objects[0].capitals[0].name;
+  const flagURL = data.data.objects[0].flag["url_svg"];
+
   mainPageContent.innerHTML = `
     <section id="main-page-content">
-      <p id="country-name">
-        ${data.data.objects[0].names.common}
-      </p>
+      <h2 id="country-name">
+        ${commonName}
+      </h2>
+      <p id="capital-name">Capital: ${capital}</p>
+      ${
+        flagURL
+          ? `
+        <div id="flag-div">
+          <p id="flag-p">Official flag</p>
+          <img id="flag" src="${flagURL}" alt="Flag of ${commonName}" />
+        </div>
+        `
+          : ""
+      }
     </section>
   `;
 }
@@ -51,10 +67,14 @@ searchForm.addEventListener("submit", async (event) => {
 
     currentQuery = `${BASE_URL}?q=${searchText}&api-key=${API_KEY}`;
 
+    console.log(currentQuery);
+
     const data = await getCountry();
 
     renderCountry(data);
   } catch (error) {
     console.error(error);
   }
+
+  searchInput.value = "";
 });
