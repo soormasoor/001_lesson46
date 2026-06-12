@@ -5,10 +5,9 @@ const searchBtn = document.getElementById("search-btn");
 const mainPageContent = document.getElementById("main-page-content");
 
 // State
-const BASE_URL = "https://api.restcountries.com/countries/v5";
+const BASE_URL = "https://api.restcountries.com/countries/v5/names.common";
 const API_KEY = "rc_live_fcdb8e3d69be45ae8bdca23e75f1649c";
-let currentQuery =
-  "https://api.restcountries.com/countries/v5?api-key=rc_live_fcdb8e3d69be45ae8bdca23e75f1649c";
+let currentQuery = "";
 
 // Helper Functions
 function formatQuery(str) {
@@ -31,7 +30,7 @@ async function getCountry() {
   return data;
 }
 
-async function renderCountry(data) {
+function renderCountry(data) {
   const commonName = data.data.objects[0].names.common;
   const capital = data.data.objects[0].capitals[0].name;
   const flagURL = data.data.objects[0].flag["url_svg"];
