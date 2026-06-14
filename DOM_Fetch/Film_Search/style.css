@@ -8,11 +8,15 @@ body {
   max-width: 100vw;
 }
 
-.thumbnail {
-  width: 200px;
+#status {
+  font-size: 2em;
 }
 
 .film-card {
-  margin: 100px auto;
+  margin: 20px auto;
   display: flex;
+  width: 80%;
+}
+.thumbnail {
+  width: 200px;
 }
