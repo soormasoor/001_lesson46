@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Search Films</title>
+  </head>
+  <body>
+    <header>
+      <h1>Studio Ghibli Films</h1>
+      <p class="sub">Search films in the Ghibli catalogue</p>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by title, director, or year…"
+        autocomplete="off"
+      />
+    </header>
+
+    <main>
+      <div id="status"></div>
+      <div id="results"></div>
+    </main>
+
+    <footer>
+      Data from
+      <a href="https://ghibliapi.vercel.app" target="_blank" rel="noopener"
+        >ghibliapi.vercel.app
+      </a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
