@@ -1,3 +1,7 @@
+* {
+  border: 1px solid red;
+}
+
 body {
   margin: 0 auto;
   text-align: center;
@@ -5,5 +9,10 @@ body {
 }
 
 .thumbnail {
-  width: 100px;
+  width: 200px;
+}
+
+.film-card {
+  margin: 100px auto;
+  display: flex;
 }
